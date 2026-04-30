@@ -92,36 +92,8 @@ const bonusCards = [
   },
 ];
 
-const cases = [
-  {
-    name: "Carla",
-    color: "border-t-pink",
-    before: "R$ 3.100/mês CLT",
-    after: "R$ 20.000+/mês",
-    quote: "Sonho era almoçar em casa. Hoje almoça em casa todo dia. Nível Black.",
-  },
-  {
-    name: "Gabi",
-    color: "border-t-orange",
-    before: "R$ 500/mês (estágio)",
-    after: "R$ 40.000+/mês",
-    quote: "Vendeu ovo de Páscoa para entrar no curso. Começou ainda na faculdade. Nível Black Pro.",
-  },
-  {
-    name: "Agatha",
-    color: "border-t-yellow",
-    before: "Trabalhava em telemarketing, havia desistido da veterinária",
-    after: "Voltou para a profissão · Nível Black",
-    quote: "Encontrou na área de alimentos o motivo para voltar.",
-  },
-  {
-    name: "Aluna com bebê",
-    color: "border-t-sky",
-    before: "Bebê de 6 meses, sem renda fixa",
-    after: "Faturamento fixo e recorrente, trabalhando de casa",
-    quote: "Construiu sua rotina do zero enquanto amamentava.",
-  },
-];
+// Substitua pelo ID do vídeo do YouTube (parte após `v=` ou `youtu.be/`)
+const TESTIMONIAL_VIDEO_ID = "VIDEO_ID_AQUI";
 
 const Index = () => {
   return (
