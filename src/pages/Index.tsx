@@ -147,11 +147,11 @@ const Index = () => {
               return (
                 <Reveal key={card.title} delay={idx * 120}>
                   <article className="group h-full rounded-3xl border border-border bg-white p-8 shadow-card transition-all hover:-translate-y-1 hover:shadow-glow">
-                    <div className="flex h-24 w-full items-center justify-center rounded-2xl bg-navy px-6 shadow-lg">
+                    <div className="flex h-20 w-full items-center">
                       <img
                         src={card.logo}
                         alt={card.alt}
-                        className="max-h-16 w-auto object-contain"
+                        className="h-full w-auto max-w-full object-contain object-left"
                         loading="lazy"
                       />
                     </div>
