@@ -2,21 +2,21 @@ import { CtaPrimary, CtaWhatsapp } from "@/components/Cta";
 import { Reveal } from "@/components/Reveal";
 import {
   Award,
-  BookOpen,
   Check,
-  ClipboardCheck,
-  GraduationCap,
   Mail,
   MapPin,
   ShieldCheck,
   Sparkles,
   Trophy,
 } from "lucide-react";
+import logoPosgraduacao from "@/assets/logo-posgraduacao.png";
+import logoFoodSmartPro from "@/assets/logo-foodsmart-pro.png";
+import logoVerificaSmart from "@/assets/logo-verificasmart.png";
 
 const includedCards = [
   {
-    icon: GraduationCap,
-    accent: "bg-pink",
+    logo: logoPosgraduacao,
+    alt: "Logo Pós-Graduação",
     title: "Pós-Graduação em RT & Consultoria de Alimentos",
     items: [
       "10 módulos completos",
