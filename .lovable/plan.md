@@ -1,51 +1,43 @@
 ## Objetivo
-Substituir os 3 ícones genéricos da seção **"Tudo que foi construído em 8 anos"** pelas logos reais dos produtos enviadas: Pós-Graduação, Food Smart Pro e VerificaSmart.
+Restaurar as logos originais (como você enviou) e deixar as 3 com tamanho visual idêntico nos cards.
 
-## Observações sobre as logos recebidas
-- **Pós-Graduação** (`logo_posgraduacao.png`) — vermelho/coral sobre fundo branco, formato horizontal largo
-- **Food Smart Pro** (`logo_foodsmartpro.png`) — vermelho/coral sobre fundo branco, formato quase quadrado
-- **VerificaSmart** (`logo_verificasmart.png`) — preto + check verde sobre fundo branco, formato horizontal
+## Passos
 
-Todas têm fundo branco e proporções diferentes — então o atual quadrado colorido (`bg-pink/orange/sky` com ícone branco) não vai funcionar. Vou trocar por um **container neutro retangular** que respeita cada proporção.
-
-## Mudanças
-
-### 1. Copiar as logos para o projeto
+### 1. Restaurar as logos originais
+Sobrescrever os PNGs em `src/assets/` recopiando dos uploads originais:
 - `user-uploads://logo_posgraduacao.png` → `src/assets/logo-posgraduacao.png`
 - `user-uploads://logo_foodsmartpro.png` → `src/assets/logo-foodsmart-pro.png`
 - `user-uploads://logo_verificasmart.png` → `src/assets/logo-verificasmart.png`
 
-### 2. Editar `src/pages/Index.tsx`
-- Importar as 3 logos no topo via ES6 (`import logoPos from "@/assets/..."`)
-- Remover os imports de ícones não mais usados: `GraduationCap`, `BookOpen`, `ClipboardCheck`
-- No array `includedCards`, trocar a propriedade `icon` (componente Lucide) + `accent` (cor de fundo) por uma propriedade `logo` (URL da imagem) e um `alt`
-- No JSX dos cards, substituir o bloco:
-  ```
-  <div className="...bg-pink..."><Icon /></div>
-  ```
-  por:
-  ```
-  <div className="flex h-16 items-center">
-    <img src={card.logo} alt={card.alt} className="max-h-16 w-auto object-contain" />
-  </div>
-  ```
-- Manter `h-16` (64px) fixo para alinhar a base das 3 logos entre os cards, mesmo com proporções diferentes
-- Manter todo o restante do card (título, lista de items, hover, sombra) intacto
+### 2. Normalizar o tamanho visual (recortar margens brancas)
+O motivo da Food Smart Pro parecer menor é que o PNG original tem **muito espaço em branco ao redor** do desenho (quase 596px de altura para um logo de ~214px). Já a Pós-Graduação ocupa quase toda a área do PNG.
 
-### 3. Resultado visual esperado
-```text
-┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
-│ [LOGO PÓS]      │  │ [LOGO FOOD]     │  │ [✓ verificasmart]│
-│                 │  │                 │  │                 │
-│ Pós-Graduação   │  │ Food Smart Pro  │  │ VerificaSmart   │
-│ em RT...        │  │ (Vitalício)     │  │                 │
-│ ✓ 10 módulos    │  │ ✓ 11+ cursos    │  │ ✓ 3 meses...    │
-│ ...             │  │ ...             │  │ ...             │
-└─────────────────┘  └─────────────────┘  └─────────────────┘
+Solução: rodar um script Python que **recorta as margens brancas** de cada PNG (mantendo apenas o desenho) — sem alterar cores nem desenho:
+- Detectar pixels brancos (R,G,B > 235) nas bordas
+- Cortar até a "bounding box" do conteúdo não-branco
+- Salvar de volta no mesmo arquivo
+
+Isso preserva 100% as logos originais — só remove o whitespace ao redor — fazendo as 3 ficarem visualmente do mesmo tamanho quando exibidas com a mesma altura CSS.
+
+### 3. Ajustar o container no `src/pages/Index.tsx` (linhas 150-157)
+Trocar o bloco atual (`h-24` + `bg-navy` + `max-h-16`) por um container limpo de altura uniforme:
+
+```tsx
+<div className="flex h-20 w-full items-center">
+  <img
+    src={card.logo}
+    alt={card.alt}
+    className="h-full w-auto max-w-full object-contain object-left"
+    loading="lazy"
+  />
+</div>
 ```
 
-## Notas técnicas
-- Sem dependências novas
-- `object-contain` + `max-h-16 w-auto` preserva a proporção de cada logo sem distorção
-- Bundling otimizado pelo Vite (hash, tree-shaking)
-- Nenhuma outra seção é afetada
+- `h-20` (80px) e `h-full` no `<img>` → as 3 logos preenchem exatamente a mesma altura
+- Sem `bg-navy` → fundo do card volta ao branco original
+- `object-left` → alinhamento consistente entre os 3 cards
+
+## Resultado esperado
+- Logos originais (cores e desenho intactos como você enviou)
+- 3 logos com a mesma altura visual e alinhadas à esquerda
+- Fundo branco dos cards preservado
