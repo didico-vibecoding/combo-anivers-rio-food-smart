@@ -389,15 +389,6 @@ const Index = () => {
               </p>
             </div>
           </Reveal>
-
-          <Reveal delay={400}>
-            <div className="mx-auto mt-12 max-w-3xl rounded-3xl bg-gradient-navy p-8 md:p-10 text-center text-white shadow-glow">
-              <p className="font-display text-2xl md:text-3xl font-extrabold leading-snug">
-                5 clientes × R$ 2.000 = <span className="text-yellow">R$ 10.000/mês.</span>
-              </p>
-              <p className="mt-2 text-white/85">Sem plantão. Trabalhando de casa.</p>
-            </div>
-          </Reveal>
         </div>
       </section>
 
