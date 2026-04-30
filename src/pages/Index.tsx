@@ -144,12 +144,16 @@ const Index = () => {
 
           <div className="mt-14 grid gap-8 md:grid-cols-3">
             {includedCards.map((card, idx) => {
-              const Icon = card.icon;
               return (
                 <Reveal key={card.title} delay={idx * 120}>
                   <article className="group h-full rounded-3xl border border-border bg-white p-8 shadow-card transition-all hover:-translate-y-1 hover:shadow-glow">
-                    <div className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${card.accent} text-white shadow-lg`}>
-                      <Icon className="h-7 w-7" />
+                    <div className="flex h-16 items-center">
+                      <img
+                        src={card.logo}
+                        alt={card.alt}
+                        className="max-h-16 w-auto object-contain"
+                        loading="lazy"
+                      />
                     </div>
                     <h3 className="mt-6 font-display text-xl font-bold text-navy leading-snug">{card.title}</h3>
                     <ul className="mt-5 space-y-3">
