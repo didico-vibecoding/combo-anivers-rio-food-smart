@@ -92,8 +92,7 @@ const bonusCards = [
   },
 ];
 
-// Substitua pelo ID do vídeo do YouTube (parte após `v=` ou `youtu.be/`)
-const TESTIMONIAL_VIDEO_ID = "VIDEO_ID_AQUI";
+const TESTIMONIAL_VIDEO_ID = "HRUY7_KS7pI";
 
 const Index = () => {
   return (
