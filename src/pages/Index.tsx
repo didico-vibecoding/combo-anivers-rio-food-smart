@@ -32,8 +32,8 @@ const includedCards = [
     ],
   },
   {
-    icon: BookOpen,
-    accent: "bg-orange",
+    logo: logoFoodSmartPro,
+    alt: "Logo Food Smart Pro",
     title: "Food Smart Pro (Vitalício)",
     items: [
       "11+ cursos livres com certificado",
@@ -44,8 +44,8 @@ const includedCards = [
     ],
   },
   {
-    icon: ClipboardCheck,
-    accent: "bg-sky",
+    logo: logoVerificaSmart,
+    alt: "Logo VerificaSmart",
     title: "VerificaSmart",
     items: [
       "3 meses de acesso gratuito ao app",
