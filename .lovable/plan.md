@@ -1,37 +1,51 @@
-# Plano — Vídeo de depoimento na seção de provas sociais
-
 ## Objetivo
-Remover os 4 cards de cases (Carla, Gabi, Agatha, Aluna com bebê) e a headline da seção 9 do `Index.tsx`, substituindo por **um único vídeo do YouTube** posicionado logo abaixo da headline existente, mantendo o bloco final de cálculo ("5 clientes × R$ 2.000…").
+Substituir os 3 ícones genéricos da seção **"Tudo que foi construído em 8 anos"** pelas logos reais dos produtos enviadas: Pós-Graduação, Food Smart Pro e VerificaSmart.
 
-## O que muda em `src/pages/Index.tsx` (seção 9 — CASES REAIS)
+## Observações sobre as logos recebidas
+- **Pós-Graduação** (`logo_posgraduacao.png`) — vermelho/coral sobre fundo branco, formato horizontal largo
+- **Food Smart Pro** (`logo_foodsmartpro.png`) — vermelho/coral sobre fundo branco, formato quase quadrado
+- **VerificaSmart** (`logo_verificasmart.png`) — preto + check verde sobre fundo branco, formato horizontal
 
-**Manter:**
-- Background `bg-muted/40` e padding da seção
-- Headline: *"Não é exceção. É o que acontece quando o método é certo."*
-- Bloco final de fechamento com gradiente navy ("5 clientes × R$ 2.000 = R$ 10.000/mês…")
+Todas têm fundo branco e proporções diferentes — então o atual quadrado colorido (`bg-pink/orange/sky` com ícone branco) não vai funcionar. Vou trocar por um **container neutro retangular** que respeita cada proporção.
 
-**Remover:**
-- Array `cases` (no topo do arquivo)
-- Grid `grid md:grid-cols-2` com os 4 `<article>` de depoimentos
+## Mudanças
 
-**Adicionar no lugar do grid:**
-- Um wrapper centralizado (`max-w-4xl mx-auto`) com `aspect-video` contendo um `<iframe>` do YouTube
-- Estilização: bordas arredondadas (`rounded-3xl`), `shadow-glow`, `overflow-hidden`, `ring` sutil para destaque
-- Envolto em `<Reveal>` para manter a animação de entrada consistente com o resto da página
-- Atributos do iframe: `title`, `allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"`, `allowFullScreen`, `loading="lazy"`
-- Pequena legenda opcional abaixo do vídeo (ex.: *"Depoimento real de aluna Food Smart"*) em texto discreto
+### 1. Copiar as logos para o projeto
+- `user-uploads://logo_posgraduacao.png` → `src/assets/logo-posgraduacao.png`
+- `user-uploads://logo_foodsmartpro.png` → `src/assets/logo-foodsmart-pro.png`
+- `user-uploads://logo_verificasmart.png` → `src/assets/logo-verificasmart.png`
 
-## Placeholder do link
-Como você ainda não enviou o URL, vou deixar uma constante no topo do arquivo:
+### 2. Editar `src/pages/Index.tsx`
+- Importar as 3 logos no topo via ES6 (`import logoPos from "@/assets/..."`)
+- Remover os imports de ícones não mais usados: `GraduationCap`, `BookOpen`, `ClipboardCheck`
+- No array `includedCards`, trocar a propriedade `icon` (componente Lucide) + `accent` (cor de fundo) por uma propriedade `logo` (URL da imagem) e um `alt`
+- No JSX dos cards, substituir o bloco:
+  ```
+  <div className="...bg-pink..."><Icon /></div>
+  ```
+  por:
+  ```
+  <div className="flex h-16 items-center">
+    <img src={card.logo} alt={card.alt} className="max-h-16 w-auto object-contain" />
+  </div>
+  ```
+- Manter `h-16` (64px) fixo para alinhar a base das 3 logos entre os cards, mesmo com proporções diferentes
+- Manter todo o restante do card (título, lista de items, hover, sombra) intacto
 
-```tsx
-const TESTIMONIAL_VIDEO_ID = "VIDEO_ID_AQUI"; // substituir pelo ID do YouTube
+### 3. Resultado visual esperado
+```text
+┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
+│ [LOGO PÓS]      │  │ [LOGO FOOD]     │  │ [✓ verificasmart]│
+│                 │  │                 │  │                 │
+│ Pós-Graduação   │  │ Food Smart Pro  │  │ VerificaSmart   │
+│ em RT...        │  │ (Vitalício)     │  │                 │
+│ ✓ 10 módulos    │  │ ✓ 11+ cursos    │  │ ✓ 3 meses...    │
+│ ...             │  │ ...             │  │ ...             │
+└─────────────────┘  └─────────────────┘  └─────────────────┘
 ```
 
-E o iframe usará `https://www.youtube.com/embed/${TESTIMONIAL_VIDEO_ID}`. Basta você me passar o link depois (ou trocar manualmente o ID — é a parte após `v=` ou `youtu.be/`).
-
 ## Notas técnicas
-- Sem dependências novas — iframe nativo
-- `aspect-video` (16:9) garante responsividade sem quebra de layout
-- `loading="lazy"` evita custo de carregamento até o usuário rolar até a seção
-- A ordem visual da seção fica: **Headline → Vídeo → Card de fechamento "R$ 10.000/mês"**
+- Sem dependências novas
+- `object-contain` + `max-h-16 w-auto` preserva a proporção de cada logo sem distorção
+- Bundling otimizado pelo Vite (hash, tree-shaking)
+- Nenhuma outra seção é afetada
