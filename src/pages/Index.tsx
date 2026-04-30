@@ -109,9 +109,8 @@ const Index = () => {
 
           <Reveal delay={120}>
             <h1 className="mt-8 font-display text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight">
-              Quem faz aniversário <span className="text-yellow">somos nós.</span>
-              <br />
-              Quem ganha o presente <span className="text-yellow">é você.</span>
+              <span className="block">Quem faz aniversário <span className="text-yellow">somos nós.</span></span>
+              <span className="mt-3 block">Quem ganha o presente <span className="text-yellow">é você.</span></span>
             </h1>
           </Reveal>
 
