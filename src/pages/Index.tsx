@@ -373,26 +373,23 @@ const Index = () => {
             </h2>
           </Reveal>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-2">
-            {cases.map((c, idx) => (
-              <Reveal key={c.name} delay={idx * 120}>
-                <article className={`h-full rounded-3xl border-t-[6px] ${c.color} bg-white p-8 shadow-card transition-all hover:-translate-y-1`}>
-                  <h3 className="font-display text-2xl font-extrabold text-navy">{c.name}</h3>
-                  <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                    <div className="rounded-2xl bg-muted px-4 py-3">
-                      <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Antes</p>
-                      <p className="mt-1 text-sm font-medium text-navy">{c.before}</p>
-                    </div>
-                    <div className="rounded-2xl bg-yellow/15 px-4 py-3">
-                      <p className="text-xs font-semibold uppercase tracking-wider text-orange">Depois</p>
-                      <p className="mt-1 text-sm font-bold text-navy">{c.after}</p>
-                    </div>
-                  </div>
-                  <p className="mt-5 italic text-muted-foreground leading-relaxed">"{c.quote}"</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal delay={150}>
+            <div className="mx-auto mt-12 max-w-4xl">
+              <div className="aspect-video overflow-hidden rounded-3xl shadow-glow ring-1 ring-navy/10 bg-navy">
+                <iframe
+                  className="h-full w-full"
+                  src={`https://www.youtube.com/embed/${TESTIMONIAL_VIDEO_ID}`}
+                  title="Depoimento de aluna Food Smart"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <p className="mt-4 text-center text-sm text-muted-foreground italic">
+                Depoimento real de aluna Food Smart
+              </p>
+            </div>
+          </Reveal>
 
           <Reveal delay={400}>
             <div className="mx-auto mt-12 max-w-3xl rounded-3xl bg-gradient-navy p-8 md:p-10 text-center text-white shadow-glow">
