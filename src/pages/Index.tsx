@@ -203,47 +203,40 @@ const Index = () => {
       {/* 4. CERTIFICAÇÃO */}
       <section className="section-pad bg-gradient-navy text-white">
         <div className="container-narrow">
-          <div className="grid items-center gap-10 md:grid-cols-[auto_1fr]">
-            <Reveal>
-              <div className="mx-auto inline-flex h-28 w-28 items-center justify-center rounded-3xl bg-white/10 ring-4 ring-yellow/40 backdrop-blur">
-                <Award className="h-14 w-14 text-yellow" />
-              </div>
-            </Reveal>
-            <Reveal delay={150}>
-              <div>
-                <h2 className="font-display text-3xl md:text-4xl font-extrabold leading-tight">
-                  Certificado reconhecido <span className="text-yellow">pelo MEC</span>
-                </h2>
-                <p className="mt-5 text-base md:text-lg text-white/85 leading-relaxed">
-                  A Pós-Graduação em RT &amp; Consultoria de Alimentos é certificada pela{" "}
-                  <strong className="text-white">Faculdade Unypublica</strong> — instituição credenciada pelo Ministério da Educação conforme{" "}
-                  <strong className="text-white">Portaria nº 615/2021</strong>. Um certificado de especialista que você pode apresentar com autoridade no mercado.
-                </p>
+          <Reveal>
+            <div className="text-center">
+              <h2 className="font-display text-3xl md:text-4xl font-extrabold leading-tight">
+                Certificado reconhecido <span className="text-yellow">pelo MEC</span>
+              </h2>
+              <p className="mx-auto mt-5 max-w-3xl text-base md:text-lg text-white/85 leading-relaxed">
+                A Pós-Graduação em RT &amp; Consultoria de Alimentos é certificada pela{" "}
+                <strong className="text-white">Faculdade Unypublica</strong> — instituição credenciada pelo Ministério da Educação conforme{" "}
+                <strong className="text-white">Portaria nº 615/2021</strong>. Um certificado de especialista que você pode apresentar com autoridade no mercado.
+              </p>
 
-                <div className="mt-8 flex flex-col sm:flex-row items-center gap-6">
-                  <a
-                    href="https://emec.mec.gov.br/emec/consulta-cadastro/detalhamento/d96957f455f6405d14c6542552b0f6eb/MjI2NjA=/93916316abe23148507bd4c260e4b878/MzMxOTQ3"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-col items-center gap-2"
-                  >
-                    <div className="rounded-2xl bg-white p-3 shadow-glow">
-                      <img src={qrMec} alt="QR Code de verificação no e-MEC" className="h-32 w-32" loading="lazy" />
-                    </div>
-                    <span className="text-xs text-white/70">Verifique no e-MEC</span>
-                  </a>
-                  <div className="rounded-2xl bg-white p-5 shadow-glow">
-                    <img
-                      src={logoUnypublica}
-                      alt="Logo Faculdade Unypublica"
-                      className="h-20 w-auto object-contain"
-                      loading="lazy"
-                    />
+              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a
+                  href="https://emec.mec.gov.br/emec/consulta-cadastro/detalhamento/d96957f455f6405d14c6542552b0f6eb/MjI2NjA=/93916316abe23148507bd4c260e4b878/MzMxOTQ3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-2"
+                >
+                  <div className="rounded-2xl bg-white p-3 shadow-glow">
+                    <img src={qrMec} alt="QR Code de verificação no e-MEC" className="h-32 w-32" loading="lazy" />
                   </div>
+                  <span className="text-xs text-white/70">Verifique no e-MEC</span>
+                </a>
+                <div className="rounded-2xl bg-white p-5 shadow-glow">
+                  <img
+                    src={logoUnypublica}
+                    alt="Logo Faculdade Unypublica"
+                    className="h-20 w-auto object-contain"
+                    loading="lazy"
+                  />
                 </div>
               </div>
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
