@@ -491,6 +491,7 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      <FloatingWhatsApp />
     </main>
   );
 };
