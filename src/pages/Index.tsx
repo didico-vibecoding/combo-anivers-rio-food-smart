@@ -330,11 +330,6 @@ const Index = () => {
             ))}
           </div>
 
-          <Reveal delay={500}>
-            <p className="mt-10 text-center text-white/85">
-              Os bônus são <strong className="text-yellow">cumulativos</strong> e válidos apenas durante a live do dia <strong className="text-yellow">05/05</strong>.
-            </p>
-          </Reveal>
         </div>
       </section>
 
