@@ -193,11 +193,6 @@ const Index = () => {
                 Se por qualquer motivo você não ficar satisfeita, basta nos contatar em até 7 dias após a compra e devolvemos{" "}
                 <strong className="text-navy">100% do seu investimento</strong>. Sem burocracia, sem perguntas.
               </p>
-              <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3 text-sm font-medium text-navy">
-                <span className="inline-flex items-center gap-2"><Mail className="h-4 w-4" />suporte@foodsmart.com.br</span>
-                <span className="hidden sm:inline text-muted-foreground">·</span>
-                <span>WhatsApp (41) 99899-0331</span>
-              </div>
             </div>
           </Reveal>
         </div>
