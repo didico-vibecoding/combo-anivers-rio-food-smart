@@ -355,8 +355,8 @@ const Index = () => {
       <section className="section-pad bg-white">
         <div className="container-narrow">
           <Reveal>
-            <h2 className="mx-auto max-w-3xl font-display text-3xl md:text-5xl font-extrabold text-navy leading-tight">
-              8 anos atrás, uma <span className="text-pink">veterinária endividada</span> decidiu que tinha que existir outro caminho.
+            <h2 className="mx-auto max-w-3xl text-center font-display text-3xl md:text-5xl font-extrabold text-navy leading-tight">
+              Conheça sua <span className="text-pink">mentora!</span>
             </h2>
           </Reveal>
 
