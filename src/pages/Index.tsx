@@ -12,6 +12,8 @@ import {
 import logoPosgraduacao from "@/assets/logo-posgraduacao.png";
 import logoFoodSmartPro from "@/assets/logo-foodsmart-pro.png";
 import logoVerificaSmart from "@/assets/logo-verificasmart.png";
+import logoUnypublica from "@/assets/logo-unypublica.png";
+import qrMec from "@/assets/qr-mec.png";
 
 const includedCards = [
   {
@@ -22,7 +24,7 @@ const includedCards = [
       "10 módulos completos",
       "360 horas de carga horária",
       "18 meses de acesso",
-      "Certificado pela Faculdade Unypública (MEC · Portaria nº 615/2021)",
+      "Certificado pela Faculdade Unypublica (MEC · Portaria nº 615/2021)",
       "Aula mensal ao vivo do Método",
       "Grupo de Vagas no WhatsApp",
       "Grupo de Networking no WhatsApp",
@@ -214,9 +216,31 @@ const Index = () => {
                 </h2>
                 <p className="mt-5 text-base md:text-lg text-white/85 leading-relaxed">
                   A Pós-Graduação em RT &amp; Consultoria de Alimentos é certificada pela{" "}
-                  <strong className="text-white">Faculdade Unypública</strong> — instituição credenciada pelo Ministério da Educação conforme{" "}
+                  <strong className="text-white">Faculdade Unypublica</strong> — instituição credenciada pelo Ministério da Educação conforme{" "}
                   <strong className="text-white">Portaria nº 615/2021</strong>. Um certificado de especialista que você pode apresentar com autoridade no mercado.
                 </p>
+
+                <div className="mt-8 flex flex-col sm:flex-row items-center gap-6">
+                  <a
+                    href="https://emec.mec.gov.br/emec/consulta-cadastro/detalhamento/d96957f455f6405d14c6542552b0f6eb/MjI2NjA=/93916316abe23148507bd4c260e4b878/MzMxOTQ3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center gap-2"
+                  >
+                    <div className="rounded-2xl bg-white p-3 shadow-glow">
+                      <img src={qrMec} alt="QR Code de verificação no e-MEC" className="h-32 w-32" loading="lazy" />
+                    </div>
+                    <span className="text-xs text-white/70">Verifique no e-MEC</span>
+                  </a>
+                  <div className="rounded-2xl bg-white p-5 shadow-glow">
+                    <img
+                      src={logoUnypublica}
+                      alt="Logo Faculdade Unypublica"
+                      className="h-20 w-auto object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
               </div>
             </Reveal>
           </div>
