@@ -128,9 +128,6 @@ const Index = () => {
           <Reveal delay={360}>
             <div className="mt-10 flex flex-col items-center gap-4">
               <CtaPrimary />
-              <p className="text-sm text-white/80">
-                <strong className="text-white">R$ 5.997 à vista</strong> ou 12× R$ 499,75 sem juros
-              </p>
             </div>
           </Reveal>
         </div>
