@@ -360,35 +360,15 @@ const Index = () => {
             </h2>
           </Reveal>
 
-          <Reveal delay={150}>
-            <div className="mx-auto mt-10 max-w-3xl space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
-              <p>Paula começou sozinha, num quarto de kitnet, devendo o cartão e o carro. Bateu na porta até ela se abrir. Criou um método. Validou com a própria vida.</p>
-              <p>
-                Hoje, mais de <strong className="text-navy">4.000 profissionais</strong> vivem esse caminho — faturando de R$ 10k a R$ 40k por mês,
-                almoçando em casa, sem plantões.
-              </p>
-            </div>
-          </Reveal>
-
-          <Reveal delay={300}>
-            <p className="mx-auto mt-10 max-w-3xl border-l-4 border-pink pl-6 font-display text-xl md:text-2xl font-bold text-navy leading-snug">
-              Quem construiu essa história foram vocês.
-              <br />
-              E quem merece o maior presente também são vocês.
-            </p>
-          </Reveal>
-
           <Reveal delay={450}>
-            <div className="mt-16 grid gap-10 md:grid-cols-2 md:items-center max-w-5xl mx-auto">
+            <div className="mt-12 grid gap-10 md:grid-cols-2 md:items-center max-w-6xl mx-auto">
               <div className="flex justify-center">
-                <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-pink/10 to-yellow/10 shadow-card ring-1 ring-border w-full max-w-sm">
-                  <img
-                    src={paulaEloize}
-                    alt="Paula Eloize — Médica Veterinária e criadora do Método Smart"
-                    className="w-full h-auto object-contain"
-                    loading="lazy"
-                  />
-                </div>
+                <img
+                  src={paulaEloize}
+                  alt="Paula Eloize — Médica Veterinária e criadora do Método Smart"
+                  className="w-full max-w-md md:max-w-lg h-auto object-contain"
+                  loading="lazy"
+                />
               </div>
               <div className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
                 <p>
