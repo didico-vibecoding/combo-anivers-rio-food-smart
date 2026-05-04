@@ -14,6 +14,7 @@ import logoFoodSmartPro from "@/assets/logo-foodsmart-pro.png";
 import logoVerificaSmart from "@/assets/logo-verificasmart.png";
 import logoUnypublica from "@/assets/logo-unypublica.png";
 import qrMec from "@/assets/qr-mec.png";
+import paulaEloize from "@/assets/paula-eloize.png";
 
 const includedCards = [
   {
@@ -352,28 +353,55 @@ const Index = () => {
 
       {/* 8. A HISTÓRIA */}
       <section className="section-pad bg-white">
-        <div className="container-narrow max-w-3xl">
+        <div className="container-narrow">
           <Reveal>
-            <h2 className="font-display text-3xl md:text-5xl font-extrabold text-navy leading-tight">
+            <h2 className="mx-auto max-w-3xl font-display text-3xl md:text-5xl font-extrabold text-navy leading-tight">
               8 anos atrás, uma <span className="text-pink">veterinária endividada</span> decidiu que tinha que existir outro caminho.
             </h2>
           </Reveal>
+
           <Reveal delay={150}>
-            <div className="mt-8 space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
-              <p>Paula começou sozinha, num quarto de kitnet, devendo o cartão e o carro.</p>
-              <p>Bateu na porta até ela se abrir. Criou um método. Validou com a própria vida.</p>
+            <div className="mx-auto mt-10 max-w-3xl space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
+              <p>Paula começou sozinha, num quarto de kitnet, devendo o cartão e o carro. Bateu na porta até ela se abrir. Criou um método. Validou com a própria vida.</p>
               <p>
                 Hoje, mais de <strong className="text-navy">4.000 profissionais</strong> vivem esse caminho — faturando de R$ 10k a R$ 40k por mês,
                 almoçando em casa, sem plantões.
               </p>
             </div>
           </Reveal>
+
           <Reveal delay={300}>
-            <p className="mt-10 border-l-4 border-pink pl-6 font-display text-xl md:text-2xl font-bold text-navy leading-snug">
+            <p className="mx-auto mt-10 max-w-3xl border-l-4 border-pink pl-6 font-display text-xl md:text-2xl font-bold text-navy leading-snug">
               Quem construiu essa história foram vocês.
               <br />
               E quem merece o maior presente também são vocês.
             </p>
+          </Reveal>
+
+          <Reveal delay={450}>
+            <div className="mt-16 grid gap-10 md:grid-cols-2 md:items-center max-w-5xl mx-auto">
+              <div className="flex justify-center">
+                <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-pink/10 to-yellow/10 shadow-card ring-1 ring-border w-full max-w-sm">
+                  <img
+                    src={paulaEloize}
+                    alt="Paula Eloize — Médica Veterinária e criadora do Método Smart"
+                    className="w-full h-auto object-contain"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  <strong className="text-navy">Paula Eloize</strong> é Médica Veterinária, especializada em Segurança dos Alimentos, com Mestrado em Segurança Alimentar pela Universidade de Lisboa e doutorado em andamento em Tecnologia de Alimentos. São mais de 10 anos de experiência em negócios e consultorias.
+                </p>
+                <p>
+                  É a criadora do <strong className="text-navy">Método Smart</strong> e do ecossistema <strong className="text-navy">Food Smart</strong> — a maior referência em formação de profissionais de RT e Consultoria de Alimentos do Brasil. Um movimento que já transformou mais de 4.000 carreiras em todo o país e que posiciona o profissional de alimentos como autoridade na sua região.
+                </p>
+                <p>
+                  Sua missão é clara: provar que a área de alimentos é o caminho mais sólido, rentável e com propósito para quem quer viver bem da profissão que escolheu.
+                </p>
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>
