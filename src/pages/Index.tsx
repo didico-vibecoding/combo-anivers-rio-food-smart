@@ -361,12 +361,12 @@ const Index = () => {
           </Reveal>
 
           <Reveal delay={450}>
-            <div className="mt-12 grid gap-10 md:grid-cols-2 md:items-center max-w-6xl mx-auto">
-              <div className="flex justify-center">
+            <div className="mt-12 grid gap-8 md:grid-cols-2 md:items-center max-w-6xl mx-auto">
+              <div className="flex justify-center md:justify-start">
                 <img
                   src={paulaEloize}
                   alt="Paula Eloize — Médica Veterinária e criadora do Método Smart"
-                  className="w-full max-w-md md:max-w-lg h-auto object-contain"
+                  className="w-full max-w-xl h-auto object-contain mx-auto"
                   loading="lazy"
                 />
               </div>
