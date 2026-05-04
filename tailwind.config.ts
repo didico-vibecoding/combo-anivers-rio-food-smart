@@ -28,6 +28,7 @@ export default {
         sky: "hsl(var(--sky))",
         pink: "hsl(var(--pink))",
         orange: "hsl(var(--orange))",
+        whatsapp: "hsl(var(--whatsapp))",
         yellow: {
           DEFAULT: "hsl(var(--yellow))",
           hover: "hsl(var(--yellow-hover))",
