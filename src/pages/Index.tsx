@@ -1,4 +1,5 @@
 import { CtaPrimary, CtaWhatsapp } from "@/components/Cta";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Reveal } from "@/components/Reveal";
 import {
   Award,
@@ -490,6 +491,7 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      <FloatingWhatsApp />
     </main>
   );
 };
