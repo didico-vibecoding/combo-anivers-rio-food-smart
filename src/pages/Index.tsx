@@ -453,7 +453,8 @@ const Index = () => {
             <div className="mx-auto mt-10 inline-block rounded-3xl border border-white/15 bg-white/5 px-8 py-6 backdrop-blur">
               <p className="text-white/70 line-through">De R$ 37.725</p>
               <p className="mt-1 font-display text-4xl md:text-6xl font-extrabold text-yellow">por R$ 5.997 à vista</p>
-              <p className="mt-2 text-white/80">ou 12× R$ 499,75 sem juros</p>
+              <p className="mt-2 text-white/80">ou 12× R$ 499,75*</p>
+              <p className="mt-1 text-[10px] text-white/60">* O valor parcelado possui acréscimo.</p>
             </div>
           </Reveal>
 
