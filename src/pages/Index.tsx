@@ -132,11 +132,11 @@ const Index = () => {
 
             {/* Foto da Paula - direita no desktop, com CTA logo abaixo */}
             <div className="order-2 md:col-span-5 flex flex-col items-center">
-              <Reveal delay={180} className="w-full flex justify-center">
+              <Reveal delay={180} className="w-full flex-1 flex justify-center items-end">
                 <img
                   src={paulaEloize}
                   alt="Paula Eloize, fundadora da Food Smart"
-                  className="w-auto max-w-full h-full max-h-[520px] object-contain drop-shadow-2xl"
+                  className="w-auto max-w-full h-full max-h-[520px] object-contain object-bottom drop-shadow-2xl block mb-0"
                   loading="eager"
                 />
               </Reveal>
