@@ -104,11 +104,11 @@ const Index = () => {
       {/* 1. HERO */}
       <section className="confetti-bg bg-gradient-hero text-white">
         <div className="container-narrow relative z-10 py-16 md:py-24 lg:py-28">
-          <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-10 lg:gap-14">
-            {/* Texto - direita no desktop, primeiro no mobile */}
-            <div className="order-1 md:order-2 md:col-span-7 text-center md:text-left">
+          <div className="grid grid-cols-1 items-stretch gap-10 md:grid-cols-12 md:gap-10 lg:gap-14">
+            {/* Texto - esquerda no desktop */}
+            <div className="order-1 md:col-span-7 text-center md:text-left flex flex-col justify-center">
               <Reveal>
-                <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs md:text-sm font-medium backdrop-blur">
+                <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs md:text-sm font-medium backdrop-blur self-center md:self-start">
                   <Sparkles className="h-4 w-4 text-yellow" />
                   Oferta exclusiva · Apenas durante a campanha
                 </span>
@@ -128,23 +128,22 @@ const Index = () => {
                   <strong className="text-white">acesso vitalício</strong>. Por <span className="font-bold text-yellow">84% menos</span>.
                 </p>
               </Reveal>
-
-              <Reveal delay={360}>
-                <div className="mt-8 flex flex-col items-center md:items-start gap-4">
-                  <CtaPrimary />
-                </div>
-              </Reveal>
             </div>
 
-            {/* Foto da Paula - esquerda no desktop, depois no mobile */}
-            <div className="order-2 md:order-1 md:col-span-5 flex justify-center md:justify-start">
-              <Reveal delay={180}>
+            {/* Foto da Paula - direita no desktop, com CTA logo abaixo */}
+            <div className="order-2 md:col-span-5 flex flex-col items-center">
+              <Reveal delay={180} className="w-full flex justify-center">
                 <img
                   src={paulaEloize}
                   alt="Paula Eloize, fundadora da Food Smart"
-                  className="w-full max-w-xs md:max-w-full h-auto object-contain drop-shadow-2xl"
+                  className="w-auto max-w-full h-full max-h-[520px] object-contain drop-shadow-2xl"
                   loading="eager"
                 />
+              </Reveal>
+              <Reveal delay={360} className="w-full">
+                <div className="mt-6 flex justify-center">
+                  <CtaPrimary />
+                </div>
               </Reveal>
             </div>
           </div>
