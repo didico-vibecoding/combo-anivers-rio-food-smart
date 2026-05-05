@@ -108,7 +108,7 @@ const Index = () => {
             {/* Texto - esquerda no desktop */}
             <div className="order-1 md:col-span-7 text-center md:text-left flex flex-col justify-center">
               <Reveal>
-                <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs md:text-sm font-medium backdrop-blur self-center md:self-start text-center">
+                <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs md:text-sm font-medium backdrop-blur self-center md:self-start">
                   <Sparkles className="h-4 w-4 text-yellow" />
                   Oferta exclusiva · Apenas durante a campanha
                 </span>
@@ -116,8 +116,8 @@ const Index = () => {
 
               <Reveal delay={120}>
                 <h1 className="mt-6 font-display text-3xl md:text-4xl lg:text-5xl font-extrabold leading-[1.08] tracking-tight">
-                  <span className="block text-left">Quem faz aniversário <span className="text-yellow">somos nós.</span></span>
-                  <span className="mt-2 block text-left">Quem ganha o presente <span className="text-yellow">é você.</span></span>
+                  <span className="block">Quem faz aniversário <span className="text-yellow">somos nós.</span></span>
+                  <span className="mt-2 block">Quem ganha o presente <span className="text-yellow">é você.</span></span>
                 </h1>
               </Reveal>
 
