@@ -16,6 +16,7 @@ import logoVerificaSmart from "@/assets/logo-verificasmart.png";
 import logoUnypublica from "@/assets/logo-unypublica.png";
 import qrMec from "@/assets/qr-mec.png";
 import paulaEloize from "@/assets/paula-eloize.png";
+import paulaEloizeMentora from "@/assets/paula-eloize-mentora.png";
 
 const includedCards = [
   {
@@ -374,7 +375,7 @@ const Index = () => {
             <div className="mt-12 grid gap-8 md:grid-cols-2 md:items-center max-w-6xl mx-auto">
               <div className="flex justify-center md:justify-start">
                 <img
-                  src={paulaEloize}
+                  src={paulaEloizeMentora}
                   alt="Paula Eloize — Médica Veterinária e criadora do Método Smart"
                   className="w-full max-w-2xl md:scale-110 h-auto object-contain mx-auto"
                   loading="lazy"
