@@ -70,30 +70,6 @@ const valueRows = [
   ["Troféu de Reconhecimento", "Inestimável"],
 ];
 
-const bonusCards = [
-  {
-    label: "1º comprador",
-    badge: "🥇 Mais raro",
-    accent: "from-yellow to-orange",
-    ring: "ring-yellow",
-    items: ["Mentoria Individual", "1 Ingresso para evento presencial", "Mentoria em Grupo"],
-    highlight: true,
-  },
-  {
-    label: "Top 3 primeiros",
-    badge: "🥈 Edição limitada",
-    accent: "from-pink to-orange",
-    ring: "ring-pink",
-    items: ["Mentoria em Grupo", "Livro físico Paula Eloize"],
-  },
-  {
-    label: "Top 5 primeiros",
-    badge: "🥉 Vagas finais",
-    accent: "from-sky to-navy",
-    ring: "ring-sky",
-    items: ["Mentoria em Grupo"],
-  },
-];
 
 const TESTIMONIAL_VIDEO_ID = "HRUY7_KS7pI";
 
