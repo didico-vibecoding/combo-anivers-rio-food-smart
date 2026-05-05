@@ -2,13 +2,11 @@ import { CtaPrimary, CtaWhatsapp } from "@/components/Cta";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Reveal } from "@/components/Reveal";
 import {
-  Award,
   Check,
   Mail,
   MapPin,
   ShieldCheck,
   Sparkles,
-  Trophy,
 } from "lucide-react";
 import logoPosgraduacao from "@/assets/logo-posgraduacao.png";
 import logoFoodSmartPro from "@/assets/logo-foodsmart-pro.png";
@@ -72,30 +70,6 @@ const valueRows = [
   ["Troféu de Reconhecimento", "Inestimável"],
 ];
 
-const bonusCards = [
-  {
-    label: "1º comprador",
-    badge: "🥇 Mais raro",
-    accent: "from-yellow to-orange",
-    ring: "ring-yellow",
-    items: ["Mentoria Individual", "1 Ingresso para evento presencial", "Mentoria em Grupo"],
-    highlight: true,
-  },
-  {
-    label: "Top 3 primeiros",
-    badge: "🥈 Edição limitada",
-    accent: "from-pink to-orange",
-    ring: "ring-pink",
-    items: ["Mentoria em Grupo", "Livro físico Paula Eloize"],
-  },
-  {
-    label: "Top 5 primeiros",
-    badge: "🥉 Vagas finais",
-    accent: "from-sky to-navy",
-    ring: "ring-sky",
-    items: ["Mentoria em Grupo"],
-  },
-];
 
 const TESTIMONIAL_VIDEO_ID = "HRUY7_KS7pI";
 
@@ -305,48 +279,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 6. BÔNUS DE ESCASSEZ */}
-      <section className="section-pad bg-gradient-navy text-white">
-        <div className="container-narrow">
-          <Reveal>
-            <h2 className="text-center font-display text-3xl md:text-5xl font-extrabold leading-tight">
-              Bônus exclusivos para os <span className="text-yellow">primeiros</span> a garantir o Combo
-            </h2>
-          </Reveal>
-
-          <div className="mt-14 grid gap-8 md:grid-cols-3 items-stretch">
-            {bonusCards.map((b, idx) => (
-              <Reveal key={b.label} delay={idx * 150}>
-                <article
-                  className={`relative h-full rounded-3xl bg-white p-8 text-navy shadow-card transition-all hover:-translate-y-1 ${
-                    b.highlight ? "ring-4 ring-yellow scale-100 md:scale-105 shadow-glow" : "opacity-95"
-                  }`}
-                >
-                  {b.highlight && (
-                    <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-pink px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white shadow-lg">
-                      O mais cobiçado
-                    </span>
-                  )}
-                  <div className={`inline-flex items-center gap-2 rounded-full bg-gradient-to-r ${b.accent} px-4 py-1.5 text-sm font-semibold text-white`}>
-                    <Trophy className="h-4 w-4" />
-                    {b.label}
-                  </div>
-                  <p className="mt-3 text-xs uppercase tracking-wider text-muted-foreground">{b.badge}</p>
-                  <ul className="mt-6 space-y-3">
-                    {b.items.map((it) => (
-                      <li key={it} className="flex gap-3 text-sm md:text-base font-medium">
-                        <Check className="mt-0.5 h-5 w-5 shrink-0 text-pink" />
-                        <span>{it}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-
-        </div>
-      </section>
 
       {/* 7. FRASE DE IMPACTO */}
       <section className="bg-navy-deep py-20 md:py-28 text-white">
