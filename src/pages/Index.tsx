@@ -377,7 +377,7 @@ const Index = () => {
                 <img
                   src={paulaEloizeMentora}
                   alt="Paula Eloize — Médica Veterinária e criadora do Método Smart"
-                  className="w-full max-w-2xl md:scale-110 h-auto object-contain mx-auto"
+                  className="w-full max-w-2xl md:scale-125 lg:scale-[1.35] h-auto object-contain mx-auto md:origin-left"
                   loading="lazy"
                 />
               </div>
