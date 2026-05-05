@@ -1,30 +1,20 @@
-# Aumentar foto da Paula na seção "Conheça sua mentora!"
+# Adicionar CTA abaixo da foto da mentora (desktop)
 
 ## O que será feito
 
-Em `src/pages/Index.tsx`, na seção "Conheça sua mentora!" (linhas ~375-384):
+Em `src/pages/Index.tsx`, na coluna da imagem da seção "Conheça sua mentora!":
 
-- Aumentar a escala da imagem no desktop de `md:scale-110` para `md:scale-125 lg:scale-[1.35]`, fazendo a foto ficar visivelmente maior em proporção ao texto.
-- Ancorar a transformação em `md:origin-left` para que o crescimento aconteça a partir da borda esquerda, sem invadir/colidir com a coluna de texto.
-- (Opcional, leve) Manter o grid em duas colunas iguais para preservar o equilíbrio entre foto e texto.
+- Transformar o wrapper da imagem em uma coluna flex (`flex flex-col`) para empilhar imagem + botão.
+- Logo abaixo do `<img>`, adicionar `<CtaPrimary>Quero garantir meu Combo Aniversário</CtaPrimary>` envolto em um `<div className="hidden md:block w-full">` — o botão aparece apenas no desktop, sem alterar a versão mobile.
+- Remover qualquer margem extra entre a imagem e o botão (`mb-0` na img) para que o botão fique "colado" no fim da foto, dando a sensação de continuidade visual.
+- Trocar a origem da escala para `md:origin-bottom-left`, fazendo o aumento crescer a partir do canto inferior esquerdo — assim a base da foto continua alinhada ao topo do botão.
 
-No mobile, nada muda — a imagem segue ocupando 100% da largura como hoje.
+## URL
 
-## Trecho final esperado
-
-```tsx
-<div className="flex justify-center md:justify-start">
-  <img
-    src={paulaEloizeMentora}
-    alt="Paula Eloize — Médica Veterinária e criadora do Método Smart"
-    className="w-full max-w-2xl md:scale-125 lg:scale-[1.35] h-auto object-contain mx-auto md:origin-left"
-    loading="lazy"
-  />
-</div>
-```
+O componente `CtaPrimary` já aponta para a mesma URL de checkout (`CHECKOUT_URL`) usada nos demais botões — nenhuma configuração adicional necessária.
 
 ## O que NÃO muda
 
-- Foto do hero permanece exatamente como está.
-- Texto, ordem e estrutura da seção continuam idênticos.
-- Comportamento mobile da seção permanece igual.
+- Mobile: nenhuma alteração visual — o botão extra fica oculto por `hidden md:block`.
+- Texto, layout e foto do hero permanecem exatamente como estão.
+- Demais seções, intactas.

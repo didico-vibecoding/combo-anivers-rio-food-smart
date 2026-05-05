@@ -373,13 +373,16 @@ const Index = () => {
 
           <Reveal delay={450}>
             <div className="mt-12 grid gap-8 md:grid-cols-2 md:items-center max-w-6xl mx-auto">
-              <div className="flex justify-center md:justify-start">
+              <div className="flex flex-col items-center md:items-start">
                 <img
                   src={paulaEloizeMentora}
                   alt="Paula Eloize — Médica Veterinária e criadora do Método Smart"
-                  className="w-full max-w-2xl md:scale-125 lg:scale-[1.35] h-auto object-contain mx-auto md:origin-left"
+                  className="w-full max-w-2xl md:scale-125 lg:scale-[1.35] h-auto object-contain mx-auto md:origin-bottom-left mb-0"
                   loading="lazy"
                 />
+                <div className="hidden md:block w-full">
+                  <CtaPrimary>Quero garantir meu Combo Aniversário</CtaPrimary>
+                </div>
               </div>
               <div className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
                 <p>
