@@ -71,7 +71,7 @@ const valueRows = [
 ];
 
 
-const TESTIMONIAL_VIDEO_ID = "HRUY7_KS7pI";
+const TESTIMONIAL_VIDEO_ID = "2OWtIPrKrBI";
 
 const Index = () => {
   return (
