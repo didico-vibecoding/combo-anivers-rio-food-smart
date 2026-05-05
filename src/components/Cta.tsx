@@ -3,7 +3,7 @@ const WHATSAPP_URL = "https://wa.me/5541998990331?text=Ol%C3%A1!%20Sou%20aluno%2
 
 export const CtaPrimary = ({ children = "Quero garantir meu Combo Aniversário", className = "" }: { children?: React.ReactNode; className?: string }) => (
   <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className={`cta-yellow ${className}`}>
-    {children}
+    <span className="text-center">{children}</span>
     <span aria-hidden>→</span>
   </a>
 );
