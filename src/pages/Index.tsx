@@ -103,34 +103,51 @@ const Index = () => {
     <main className="overflow-x-hidden">
       {/* 1. HERO */}
       <section className="confetti-bg bg-gradient-hero text-white">
-        <div className="container-narrow relative z-10 py-20 md:py-32 text-center">
-          <Reveal>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs md:text-sm font-medium backdrop-blur">
-              <Sparkles className="h-4 w-4 text-yellow" />
-              Oferta exclusiva · Apenas durante a campanha
-            </span>
-          </Reveal>
+        <div className="container-narrow relative z-10 py-16 md:py-24 lg:py-28">
+          <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-10 lg:gap-14">
+            {/* Texto - direita no desktop, primeiro no mobile */}
+            <div className="order-1 md:order-2 md:col-span-7 text-center md:text-left">
+              <Reveal>
+                <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs md:text-sm font-medium backdrop-blur">
+                  <Sparkles className="h-4 w-4 text-yellow" />
+                  Oferta exclusiva · Apenas durante a campanha
+                </span>
+              </Reveal>
 
-          <Reveal delay={120}>
-            <h1 className="mt-8 font-display text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight">
-              <span className="block">Quem faz aniversário <span className="text-yellow">somos nós.</span></span>
-              <span className="mt-3 block">Quem ganha o presente <span className="text-yellow">é você.</span></span>
-            </h1>
-          </Reveal>
+              <Reveal delay={120}>
+                <h1 className="mt-6 font-display text-3xl md:text-4xl lg:text-5xl font-extrabold leading-[1.08] tracking-tight">
+                  <span className="block">Quem faz aniversário <span className="text-yellow">somos nós.</span></span>
+                  <span className="mt-2 block">Quem ganha o presente <span className="text-yellow">é você.</span></span>
+                </h1>
+              </Reveal>
 
-          <Reveal delay={240}>
-            <p className="mx-auto mt-8 max-w-3xl text-base md:text-xl leading-relaxed text-white/85">
-              Pela primeira vez na história da Food Smart, todo o ecossistema —{" "}
-              <strong className="text-white">Pós-Graduação, Food Smart Pro e VerificaSmart</strong> — está reunido em um único combo com{" "}
-              <strong className="text-white">acesso vitalício</strong>. Por <span className="font-bold text-yellow">84% menos</span>.
-            </p>
-          </Reveal>
+              <Reveal delay={240}>
+                <p className="mt-6 max-w-2xl mx-auto md:mx-0 text-sm md:text-base lg:text-lg leading-relaxed text-white/85">
+                  Pela primeira vez na história da Food Smart, todo o ecossistema —{" "}
+                  <strong className="text-white">Pós-Graduação, Food Smart Pro e VerificaSmart</strong> — está reunido em um único combo com{" "}
+                  <strong className="text-white">acesso vitalício</strong>. Por <span className="font-bold text-yellow">84% menos</span>.
+                </p>
+              </Reveal>
 
-          <Reveal delay={360}>
-            <div className="mt-10 flex flex-col items-center gap-4">
-              <CtaPrimary />
+              <Reveal delay={360}>
+                <div className="mt-8 flex flex-col items-center md:items-start gap-4">
+                  <CtaPrimary />
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
+
+            {/* Foto da Paula - esquerda no desktop, depois no mobile */}
+            <div className="order-2 md:order-1 md:col-span-5 flex justify-center md:justify-start">
+              <Reveal delay={180}>
+                <img
+                  src={paulaEloize}
+                  alt="Paula Eloize, fundadora da Food Smart"
+                  className="w-full max-w-xs md:max-w-full h-auto object-contain drop-shadow-2xl"
+                  loading="eager"
+                />
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
 
