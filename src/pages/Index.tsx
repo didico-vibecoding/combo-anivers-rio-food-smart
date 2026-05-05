@@ -2,13 +2,11 @@ import { CtaPrimary, CtaWhatsapp } from "@/components/Cta";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Reveal } from "@/components/Reveal";
 import {
-  Award,
   Check,
   Mail,
   MapPin,
   ShieldCheck,
   Sparkles,
-  Trophy,
 } from "lucide-react";
 import logoPosgraduacao from "@/assets/logo-posgraduacao.png";
 import logoFoodSmartPro from "@/assets/logo-foodsmart-pro.png";
