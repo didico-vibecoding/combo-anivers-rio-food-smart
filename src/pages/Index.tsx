@@ -142,7 +142,7 @@ const Index = () => {
               </Reveal>
               <Reveal delay={360} className="w-full">
                 <div className="flex justify-center">
-                  <CtaPrimary />
+                  <CtaPrimary className="w-full max-w-md justify-center text-center" />
                 </div>
               </Reveal>
             </div>
