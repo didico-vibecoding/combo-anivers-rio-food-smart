@@ -114,6 +114,12 @@
       radial-gradient(circle at 65% 60%, hsl(var(--sky) / 0.5) 0 3px, transparent 4px);
   }
 
+  /* Remove confetti dots from specific sections */
+  .no-confetti::before,
+  .no-confetti::after {
+    content: none;
+  }
+
   .cta-yellow {
     @apply inline-flex items-center justify-center gap-2 rounded-full bg-yellow px-8 py-5 font-display text-base md:text-lg font-bold text-navy transition-all hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0;
     box-shadow: var(--shadow-cta);

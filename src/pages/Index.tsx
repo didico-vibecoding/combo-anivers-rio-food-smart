@@ -102,7 +102,7 @@ const Index = () => {
   return (
     <main className="overflow-x-hidden">
       {/* 1. HERO */}
-      <section className="confetti-bg bg-gradient-hero text-white">
+      <section className="confetti-bg no-confetti bg-gradient-hero text-white">
         <div className="container-narrow relative z-10 py-16 md:py-24 lg:py-28">
           <div className="grid grid-cols-1 items-stretch gap-10 md:grid-cols-12 md:gap-10 lg:gap-14">
             {/* Texto - esquerda no desktop */}
