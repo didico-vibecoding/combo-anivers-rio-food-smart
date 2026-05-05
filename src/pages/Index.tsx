@@ -293,9 +293,10 @@ const Index = () => {
           <Reveal delay={300}>
             <div className="mx-auto mt-10 max-w-3xl rounded-3xl bg-gradient-navy p-8 md:p-12 text-center text-white shadow-glow">
               <p className="font-display text-lg md:text-xl uppercase tracking-wider text-white/70">No Combo Aniversário</p>
-              <p className="mt-3 font-display text-4xl md:text-6xl font-extrabold text-yellow">R$ 5.997 à vista</p>
-              <p className="mt-2 text-white/80">ou 12× R$ 499,75*</p>
-              <p className="mt-1 text-[10px] text-white/60">* O valor parcelado possui acréscimo.</p>
+              <p className="mt-3 text-sm md:text-base text-white/70 line-through">De R$ 37.725</p>
+              <p className="mt-3 font-display text-4xl md:text-6xl font-extrabold text-yellow">12× de R$ 499,75</p>
+              <p className="mt-2 text-lg md:text-2xl font-semibold text-white/90">ou R$ 5.997 à vista</p>
+              <p className="mt-2 text-[10px] text-white/60">* O valor parcelado possui acréscimo.</p>
               <div className="mt-6 inline-flex flex-wrap items-center justify-center gap-2 rounded-full bg-pink px-6 py-3 font-display text-base md:text-lg font-bold">
                 Você economiza R$ 31.728 — 84% OFF
               </div>
@@ -466,10 +467,10 @@ const Index = () => {
 
           <Reveal delay={300}>
             <div className="mx-auto mt-10 inline-block rounded-3xl border border-white/15 bg-white/5 px-8 py-6 backdrop-blur">
-              <p className="text-white/70 line-through">De R$ 37.725</p>
-              <p className="mt-1 font-display text-4xl md:text-6xl font-extrabold text-yellow">por R$ 5.997 à vista</p>
-              <p className="mt-2 text-white/80">ou 12× R$ 499,75*</p>
-              <p className="mt-1 text-[10px] text-white/60">* O valor parcelado possui acréscimo.</p>
+              <p className="text-sm md:text-base text-white/70 line-through">De R$ 37.725</p>
+              <p className="mt-2 font-display text-4xl md:text-6xl font-extrabold text-yellow">12× de R$ 499,75</p>
+              <p className="mt-2 text-lg md:text-2xl font-semibold text-white/90">ou R$ 5.997 à vista</p>
+              <p className="mt-2 text-[10px] text-white/60">* O valor parcelado possui acréscimo.</p>
             </div>
           </Reveal>
 
