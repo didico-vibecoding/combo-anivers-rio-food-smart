@@ -297,9 +297,6 @@ const Index = () => {
               <p className="mt-3 font-display text-4xl md:text-6xl font-extrabold text-yellow">12× de R$ 499,75</p>
               <p className="mt-2 text-lg md:text-2xl font-semibold text-white/90">ou R$ 5.997 à vista</p>
               <p className="mt-2 text-[10px] text-white/60">* O valor parcelado possui acréscimo.</p>
-              <div className="mt-6 inline-flex flex-wrap items-center justify-center gap-2 rounded-full bg-pink px-6 py-3 font-display text-base md:text-lg font-bold">
-                Você economiza R$ 31.728 — 84% OFF
-              </div>
               <div className="mt-8">
                 <CtaPrimary />
               </div>
