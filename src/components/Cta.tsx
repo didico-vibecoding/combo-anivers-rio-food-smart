@@ -35,7 +35,7 @@ export const CtaPrimary = ({ children = "Quero garantir meu Combo Aniversário",
 };
 
 export const CtaWhatsapp = ({ children }: { children: React.ReactNode }) => (
-  
+  <a
     href={WHATSAPP_URL}
     target="_blank"
     rel="noopener noreferrer"
